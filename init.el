@@ -11,7 +11,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (company-solidity flymake-solidity solidity-mode ob-typescript tide ts-comint tss typescript-mode common-lisp-snippets flymd markdown-mode jekyll-modes flymake-yaml yaml-mode gotest s dash f go-tag go-playground exec-path-from-shell web-mode rust-mode go-mode))))
+    (dockerfile-mode vue-html-mode vue-mode company-solidity flymake-solidity solidity-mode ob-typescript tide ts-comint tss typescript-mode common-lisp-snippets flymd markdown-mode jekyll-modes flymake-yaml yaml-mode gotest s dash f go-tag go-playground exec-path-from-shell web-mode rust-mode go-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -48,18 +48,21 @@
 
 ;; auto use web-mode to .js
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.ts\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx?" . web-mode))
+
 ;;(setq web-mode-content-types-alist
 ;;	  '(("jsx"  . "/project/dir/.*\\.js[x]?\\'")))
 ;;(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 
 ;; use js as jsx
 (setq web-mode-content-types-alist
-	  '(("jsx" . "\\.js[x]?\\'")))
+	  '(("jsx" . "\\.[jt]s[x]?\\'")))
 
 ;; use ts as tsx
-(setq web-mode-content-types-alist
-	  '(("jsx" . "\\.ts[x]?\\'")))
+;;(setq web-mode-content-types-alist
+;;	  '(("jsx" . "\\.ts[x]?\\'")))
 
 ;;;indent
 (setq tab-width 2)
@@ -69,6 +72,7 @@
 (setq web-mode-markup-indent-offset 2)
 (setq web-mode-css-indent-offset 2)
 (setq web-mode-code-indent-offset 2)
+
 ;; key bind 
 
 (global-set-key (kbd "C-x <up>") 'windmove-up)
@@ -82,3 +86,13 @@
 ;;(require 'init-clojure)
 ;;(require 'init-clojure-cider)
 
+;;emacs auto-save
+
+;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/.
+; create the autosave dir if necessary, since emacs won't.
+(make-directory "~/.emacs.d/autosaves/" t)
+;;(make-directory "~/.emacs.d/backups/" t)
+; put files
+(custom-set-variables
+  '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/" t))))
+;;  '(backup-directory-alist '((".*" . "~/.emacs.d/backups/"))))
