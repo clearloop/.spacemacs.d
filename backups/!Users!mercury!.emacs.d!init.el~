@@ -12,7 +12,7 @@
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(package-selected-packages
    (quote
-    (sr-speedbar dockerfile-mode vue-html-mode vue-mode company-solidity flymake-solidity solidity-mode ob-typescript tide ts-comint tss typescript-mode common-lisp-snippets flymd markdown-mode jekyll-modes flymake-yaml yaml-mode gotest s dash f go-tag go-playground exec-path-from-shell web-mode rust-mode go-mode))))
+    (dockerfile-mode vue-html-mode vue-mode company-solidity flymake-solidity solidity-mode ob-typescript tide ts-comint tss typescript-mode common-lisp-snippets flymd markdown-mode jekyll-modes flymake-yaml yaml-mode gotest s dash f go-tag go-playground exec-path-from-shell web-mode rust-mode go-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -85,8 +85,11 @@
 (menu-bar-mode 0)
 
 ;; speed-bar
-(speedbar 1)
-(setq sr-speedbar-auto-refresh nil)
-(setq speedbar-show-unknown-files t) ; show all files
-(setq speedbar-use-images nil) ; use text for buttons
-(setq sr-speedbar-right-side nil) ; put on left side
+(setq speedbar-show-unknown-files t)  
+(setq speedbar-use-images nil)  
+(setq sr-speedbar-width 30)  
+(setq sr-speedbar-right-side nil)  
+
+(global-set-key (kbd "<f5>") (lambda()  
+                               (interactive)  
+                               (sr-speedbar-toggle))) 
