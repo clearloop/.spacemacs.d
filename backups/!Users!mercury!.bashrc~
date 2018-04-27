@@ -1,0 +1,3 @@
+#emacs2
+
+export PATH=/usr/local/bin:$PATH
