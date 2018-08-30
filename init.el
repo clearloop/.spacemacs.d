@@ -12,7 +12,7 @@
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(package-selected-packages
    (quote
-    (company company-go company-quickhelp company-racer company-shell company-web racer dart-mode go-snippets rust-playground toml-mode racket-mode ace-window dockerfile-mode vue-html-mode vue-mode company-solidity flymake-solidity solidity-mode ob-typescript tide ts-comint tss typescript-mode common-lisp-snippets flymd markdown-mode jekyll-modes flymake-yaml yaml-mode gotest s dash f go-tag go-playground exec-path-from-shell web-mode rust-mode))))
+    (swift-mode company company-go company-quickhelp company-web racer toml-mode ace-window dockerfile-mode company-solidity markdown-mode jekyll-modes yaml-mode web-mode rust-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
