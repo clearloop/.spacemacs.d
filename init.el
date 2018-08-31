@@ -22,7 +22,6 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-
 ;; <Variables>
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -32,13 +31,13 @@
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(package-selected-packages
    (quote
-    (go-mode swift-mode company company-quickhelp racer toml-mode dockerfile-mode markdown-mode yaml-mode web-mode rust-mode))))
+    (robe mmm-mode inf-ruby go-mode swift-mode company company-quickhelp racer toml-mode dockerfile-mode markdown-mode yaml-mode web-mode rust-mode))))
 
 
-;; <Faces>
+
+;; <Face>
 (custom-set-faces
- ;; menu-bar
- (menu-bar-mode 0) 
+ (menu-bar-mode 0)
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -55,44 +54,9 @@
 (make-directory "~/.emacs.d/backups/" t)
 
 
-;; <Langs>
-;; web
-;; require
-(require 'web-mode)
-
-;; indent
-(setq tab-width 2)
-(setq default-tab-width 2)
-(setq indent-tabs-mode t)
-(setq-default indent-tabs-mode nil) 
-(setq web-mode-markup-indent-offset 2)
-(setq web-mode-css-indent-offset 2)
-(setq web-mode-code-indent-offset 2)
-
-;; auto use web-mode to .js
-(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tsx?\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.json\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx?" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-
-;; use js as jsx
-(setq web-mode-content-types-alist
-      '(("jsx" . "\\.[jt]s[x]?\\'")))
-
-;; engine
-(setq web-mode-engines-alist '(("ruby" . "\\.erb\\'")))
-
-
-;; rust
-(add-hook 'rust-mode-hook #'racer-mode)
-(add-hook 'racer-mode-hook #'eldoc-mode)
-(add-hook 'racer-mode-hook #'company-mode)
-
-(require 'rust-mode)
-
-(define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
-(setq company-tooltip-align-annotations t)
-
-
+;; paths
+(add-to-list 'load-path "~/.emacs.d/langs")
+(require 'init-web)
+(require 'init-rust)
+(require 'init-ruby)
+(put 'downcase-region 'disabled nil)
