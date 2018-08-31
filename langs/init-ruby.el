@@ -16,4 +16,9 @@
 (define-key robe-mode-map (kbd "TAB") #'complete-symbol)
 (define-key robe-mode-map (kbd "C-c C-s") #'inf-ruby-console-auto)
 
+
+
+
+
+
 (provide 'init-ruby)
