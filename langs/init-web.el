@@ -42,6 +42,9 @@
 (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
 (add-to-list 'web-mode-indentation-params '("lineup-ternary" . nil))
 
+;; Keys
+(define-key web-mode-map (kbd "C-c /") #'web-mode-element-close)
+
 ;; Left-padding
 (setq web-mode-style-padding 1)
 (setq web-mode-script-padding 1)
