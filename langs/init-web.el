@@ -8,15 +8,10 @@
 (add-to-list 'auto-mode-alist '("\\.jsx?" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-
-;; Associate a content type
-(add-to-list 'auto-mode-alist '("\\.api\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("/some/react/path/.*\\.js[x]?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.babelrc?\\'" . js-mode))
 
 (setq web-mode-content-types-alist
-  '(("json" . "/some/path/.*\\.api\\'")
-    ("xml"  . "/other/path/.*\\.api\\'")
-    ("jsx"  . "/some/react/path/.*\\.js[x]?\\'")))
+  '(("jsx" . "\\.js[x]?\\'")))
 
 ;; Indent
 (setq tab-width 2)

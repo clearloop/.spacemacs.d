@@ -24,29 +24,33 @@
 
 ;; <Config>
 ;; key-bind
-(global-set-key (kbd "C-x <up>") 'windmove-up)
-(global-set-key (kbd "C-x <down>") 'windmove-down)
+;;(global-set-key (kbd "C-x <up>") 'windmove-up)
+;;(global-set-key (kbd "C-x <down>") 'windmove-down)
+(global-set-key (kbd "C-c ]") 'shrink-window-horizontally)
+(global-set-key (kbd "C-c [") 'enlarge-window-horizontally)
 ;; dir
 ;; (put 'dired-find-alternate-file 'disabled nil)
 ;; (make-directory "~/.emacs.d/backups/" t)
 ;; (put 'downcase-region 'disabled nil)
 
 ;; <Variables>
-;;(menu-bar-mode 0)
-;;(set-face-background 'mode-line "transparent")
+(menu-bar-mode 0)
 (custom-set-variables
- (menu-bar-mode 0)
- (set-face-background 'mode-line "transparent")
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
+ '(nil nil t)
  '(package-selected-packages
    (quote
-    (go-autocomplete company-racer robe mmm-mode inf-ruby go-mode swift-mode company company-quickhelp racer toml-mode dockerfile-mode markdown-mode yaml-mode web-mode rust-mode))))
+    (rust-playground c-eldoc elpy company-racer racer markdown-mode company-go poly-markdown go-autocomplete robe mmm-mode inf-ruby go-mode swift-mode company company-quickhelp toml-mode dockerfile-mode yaml-mode web-mode rust-mode))))
 
 ;; <Face>
+;(set-face-foreground 'mode-line "transparent")
+(set-face-background 'mode-line "transparent")
+;(set-face-foreground 'mode-line-inactive "transparent")
+(set-face-background 'mode-line-inactive "transparent")
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -54,7 +58,16 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; paths
+;; <Indent>
+(setq-default
+ c-default-style "bsd"
+ c-syntactic-indentation t
+ c-basic-offset 2
+ c-basic-indent 2
+ c-tab-always-indent t)
+(c-set-offset 'brace-list-open 0)
+
+;; <Paths>
 (add-to-list 'load-path "~/.emacs.d/langs")
 (require 'init-web)
 (require 'init-rust)
