@@ -7,7 +7,7 @@
 (defun rust-run ()
   (interactive)
   (shell-command "cargo run"))
-(global-set-key (kbd "C-c r") 'rust-run)
+(global-set-key (kbd "C-c '") 'rust-run)
 
 (require 'rust-mode)
 (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)

@@ -28,6 +28,21 @@
 ;;(global-set-key (kbd "C-x <down>") 'windmove-down)
 (global-set-key (kbd "C-c ]") 'shrink-window-horizontally)
 (global-set-key (kbd "C-c [") 'enlarge-window-horizontally)
+;; replaces forward-sentence
+(global-set-key
+ (kbd "M-n")
+ (lambda () (interactive)
+   (setq this-command 'next-line)
+   (next-line 5)))
+
+;; replaces backward-sentence
+(global-set-key
+ (kbd "M-p")
+ (lambda ()
+   (interactive)
+   (setq this-command 'previous-line)
+   (previous-line 5)))
+
 ;; dir
 ;; (put 'dired-find-alternate-file 'disabled nil)
 ;; (make-directory "~/.emacs.d/backups/" t)
@@ -44,7 +59,7 @@
  '(nil nil t)
  '(package-selected-packages
    (quote
-    (rust-playground c-eldoc elpy company-racer racer markdown-mode company-go poly-markdown go-autocomplete robe mmm-mode inf-ruby go-mode swift-mode company company-quickhelp toml-mode dockerfile-mode yaml-mode web-mode rust-mode))))
+    (gitignore-mode rust-playground c-eldoc elpy company-racer racer markdown-mode company-go poly-markdown go-autocomplete robe mmm-mode inf-ruby go-mode swift-mode company company-quickhelp toml-mode dockerfile-mode yaml-mode web-mode rust-mode))))
 
 ;; <Face>
 ;(set-face-foreground 'mode-line "transparent")
@@ -73,3 +88,5 @@
 (require 'init-rust)
 (require 'init-ruby)
 (require 'init-go)
+
+;; <Self>
