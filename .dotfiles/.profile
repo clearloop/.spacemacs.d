@@ -5,26 +5,24 @@ function es() {
 }
 
 # proxy
-function git_proxy_on(){
+function proxy_on(){
+    export http_proxy="http://127.0.0.1:1080"
+    export https_proxy="http://127.0.0.1:1080"
+
     git config --global https.proxy 'http://127.0.0.1:1080'
     git config --global https.proxy 'https://127.0.0.1:1080'
     git config --global http.proxy 'socks5://127.0.0.1:1080' 
     git config --global https.proxy 'socks5://127.0.0.1:1080'
-    echo -e "git proxy on"
+
+    echo -e "proxy on"
 }
 
-function git_proxy_off(){
-    git config --global --unset http.proxy
-    git config --global --unset https.proxy
-    echo -e "git proxy off"
-}
-
-function http_proxy_on(){
-    export http_proxy="http://127.0.0.1:1080"
-    export https_proxy="http://127.0.0.1:1080"
-}
-
-function http_proxy_off(){
+function proxy_off(){
     unset http_proxy
     unset https_proxy
+
+    git config --global --unset http.proxy
+    git config --global --unset https.proxy
+
+    echo -e "proxy off"
 }

@@ -18,3 +18,4 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
 # bashrc
 [[ -s ~/.bashrc ]] && source ~/.bashrc
+[[ -s ~/.profile ]] && source ~/.profile

@@ -84,9 +84,8 @@
 
 ;; <Paths>
 (add-to-list 'load-path "~/.emacs.d/langs")
+(require 'init-go)
 (require 'init-web)
+(require 'init-dart)
 (require 'init-rust)
 (require 'init-ruby)
-(require 'init-go)
-
-;; <Self>
