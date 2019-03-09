@@ -3,7 +3,7 @@
 # gem
 export GEM_HOME=$HOME/Library/gems
 export GEM_PATH=$HOME/Library/gems
-export PATH=$HOME/Library/bin:$PATH
+export PATH=$HOME/Library/gems/bin:$PATH
 
 # brew
 export GPG_TTY=$(tty)
