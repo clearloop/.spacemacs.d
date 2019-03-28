@@ -40,7 +40,6 @@
    (previous-line 5)))
 
 (global-set-key (kbd "M-s M-s") 'shell)
-(global-set-key (kbd "M-s M-e") 'shell-command)
 
 ;; dir
 ;; (put 'dired-find-alternate-file 'disabled nil)
@@ -55,14 +54,13 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
- '(nil nil t)
  '(package-selected-packages
    (quote
-    (dart-mode gitignore-mode rust-playground c-eldoc elpy company-racer racer markdown-mode company-go poly-markdown go-autocomplete robe mmm-mode inf-ruby go-mode swift-mode company company-quickhelp toml-mode dockerfile-mode yaml-mode web-mode rust-mode))))
+    (company-solidity solidity-mode company-nginx nginx-mode dart-mode gitignore-mode rust-playground c-eldoc elpy company-racer racer markdown-mode company-go poly-markdown go-autocomplete robe mmm-mode inf-ruby go-mode swift-mode company company-quickhelp toml-mode dockerfile-mode yaml-mode web-mode rust-mode))))
 
 ;; <Face>
-(set-face-background 'mode-line "transparent")
-(set-face-background 'mode-line-inactive "transparent")
+(set-face-background 'mode-line nil)
+(set-face-background 'mode-line-inactive nil)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -82,7 +80,9 @@
 ;; <Paths>
 (add-to-list 'load-path "~/.emacs.d/langs")
 (require 'init-go)
+(require 'init-ts)
 (require 'init-web)
 (require 'init-dart)
 (require 'init-rust)
 (require 'init-ruby)
+(require 'init-scheme)

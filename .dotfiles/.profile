@@ -1,22 +1,37 @@
 # emulator
 function es() {
-    nohup emulator @Pixel_2_API_28 &
+    nohup emulator @New_Device_API_Q &
     open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
 }
 
 # proxy
-function proxy_on() {
-        export http_proxy="http://127.0.0.1:1080"
-        export https_proxy="http://127.0.0.1:1080"
-
-        git config --global https.proxy "http://127.0.0.1:1080"
-        git config --global https.proxy "https://127.0.0.1:1080"
-}
-
-function proxy_off() {
+function proxy() {
+    if [ "$1" = "1" ]; then
         unset http_proxy
         unset https_proxy
 
         git config --global --unset http.proxy
         git config --global --unset https.proxy
-}    
+
+        echo -e "\033[0;32mProxy off...\033[0m"
+    else
+        export http_proxy="http://127.0.0.1:1080"
+        export https_proxy="http://127.0.0.1:1080"
+
+        git config --global https.proxy "http://127.0.0.1:1080"
+        git config --global https.proxy "https://127.0.0.1:1080"
+
+        echo -e "\033[0;31mProxy on...\033[0m"
+    fi
+}
+
+# serve
+SITES=$HOME/Sites
+function bg() {
+    nohup serve $SITES/$1 > $SITES/${1}.nohup 2>&1 &
+    echo -e "\033[0;32mserve $1 ...\033[0m"
+}
+
+function fg() {
+    tail -f $SITES/.jobs/${1}.nohup
+}

@@ -1,11 +1,18 @@
+# Applications
+export PATH=$HOME/Library/bin:$PATH
+
 # Package Managers
 # ==================
 # pkg
 export PKG_CONFIG_PATH=$HOME/pkg_config
+
 # gem
 export GEM_HOME=$HOME/Library/gems
 export GEM_PATH=$HOME/Library/gems
-export PATH=$HOME/Library/gems/bin:$PATH
+export PATH=$HOME/Library/gems/bin:$HOME/.gem/ruby/2.6.0/bin:$PATH
+
+# pub
+export PATH=$HOME/.pub-cache/bin:$PATH
 
 # brew
 export GPG_TTY=$(tty)
@@ -13,7 +20,8 @@ export PATH=/usr/local/sbin:$PATH
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
 # cargo
-export PATH="/usr/local/opt/node@8/bin:$PATH"
+export PATH=$HOME/.cargo/bin:$PATH
+export RUST_SRC_PATH=$HOME/.rustup/toolchains/stable-x86_64-apple-darwin
 
 # yarn
 export PATH=/Users/mercury/.local/bin:$PATH
@@ -32,6 +40,9 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 export GOPATH=$HOME/Library/go
 export PATH=$HOME/Library/go/bin:$PATH
 
+# Javascript
+export REACT_APP_RUNTIME="web"
+
 # Applications Developing Tools
 # =============================
 # Android
@@ -47,7 +58,10 @@ export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 
 # CITA
-export CITA_HOME=$HOME/Library/cita
-export CITA_PATH=$HOME/code/cita/target/install
-export CITA_BIN=$CITA_PATH/bin
-export PATH=$CITA_BIN:$PATH
+# export CITA_HOME=$HOME/Library/cita
+# export CITA_PATH=/usr/local/Cellar/cita_compiled/self_optimization@0.21.1/libexec
+# export CITA_BIN=$CITA_PATH/bin
+# export PATH=$CITA_BIN:$PATH
+
+# added by travis gem
+[ -f /Users/mercury/.travis/travis.sh ] && source /Users/mercury/.travis/travis.sh
