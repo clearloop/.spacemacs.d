@@ -21,7 +21,8 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
 # cargo
 export PATH=$HOME/.cargo/bin:$PATH
-export RUST_SRC_PATH=$HOME/.rustup/toolchains/stable-x86_64-apple-darwin
+export RUSTUP_DIST_ROOT=https://mirrors.ustc.edu.cn/rust-static
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 # yarn
 export PATH=/Users/mercury/.local/bin:$PATH
@@ -46,9 +47,10 @@ export REACT_APP_RUNTIME="web"
 # Applications Developing Tools
 # =============================
 # Android
-export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/tools/bin:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=$ANDROID_SDK_ROOT/emulator:$PATH
 

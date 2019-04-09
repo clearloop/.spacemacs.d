@@ -9,11 +9,8 @@
 (setq company-tooltip-align-annotations t)
 
 ;; commands
+(define-key rust-mode-map (kbd "C-c '") 'rust-run)
 (defun rust-run ()
   (interactive) (shell-command "cargo run"))
-
-(add-hook
- 'rust-mode
- (local-set-key (kbd "C-c '") 'rust-run))
 
 (provide 'init-rust)
