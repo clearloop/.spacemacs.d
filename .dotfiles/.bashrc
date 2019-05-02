@@ -1,4 +1,5 @@
 # Applications
+# ============
 export PATH=$HOME/Library/bin:$PATH
 
 # Package Managers
@@ -40,6 +41,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 # Go
 export GOPATH=$HOME/Library/go
 export PATH=$HOME/Library/go/bin:$PATH
+export GO111MODULE=on
 
 # Javascript
 export REACT_APP_RUNTIME="web"
@@ -58,12 +60,6 @@ export PATH=$ANDROID_SDK_ROOT/emulator:$PATH
 export PATH=$PATH:$HOME/Library/flutter/bin
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
-
-# CITA
-# export CITA_HOME=$HOME/Library/cita
-# export CITA_PATH=/usr/local/Cellar/cita_compiled/self_optimization@0.21.1/libexec
-# export CITA_BIN=$CITA_PATH/bin
-# export PATH=$CITA_BIN:$PATH
 
 # added by travis gem
 [ -f /Users/mercury/.travis/travis.sh ] && source /Users/mercury/.travis/travis.sh
