@@ -1,5 +1,10 @@
 # README
 
+## Install
+```
+curl https://raw.githubusercontent.com/clearloop/.emacs.d/master/.dotfiles/install -sSf | sh
+```
+
 ## Decoration
 ```lisp
 (set-face-background 'mode-line "transparent")

@@ -1,0 +1,2 @@
+git clone https://github.com/clearloop/.emacs.d.git ~/.emacs.d
+mv ~/.emacs.d/.dotfiles/.tmux.conf ~
