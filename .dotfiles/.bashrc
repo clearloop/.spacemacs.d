@@ -32,6 +32,9 @@ export NETLIFY_AUTH_TOKEN=d9ce2ccd45fe2ecd11b3aa5fdc898cd4c46c3a204afa808642dbd8
 
 # Language Settings
 # =================
+# Node
+export PATH="/usr/local/opt/node@10/bin:$PATH"
+
 # Ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/ruby/lib"

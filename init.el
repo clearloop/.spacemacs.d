@@ -16,7 +16,7 @@
 (package-initialize)
 
 ;; <Init>
-;; Added by Package.el.  This must come before configurations of   
+;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
@@ -24,22 +24,17 @@
 
 ;; <Config>
 ;; key-bind
-(global-set-key (kbd "C-c ]") 'shrink-window-horizontally)
-(global-set-key (kbd "C-c [") 'enlarge-window-horizontally)
+;; (bind-key* "M-n" (lambda () (interactive)
+;;     (setq this-command 'next-line)
+;;     (next-line 5)))
+;; 
+;; (bind-key* "M-p" (lambda () (interactive)
+;;     (setq this-command 'previous-line)
+;;     (previous-line 5)))
 
-(global-set-key
- (kbd "M-n")
- (lambda () (interactive)
-   (setq this-command 'next-line)
-   (next-line 5)))
-
-(global-set-key
- (kbd "M-p")
- (lambda () (interactive)
-   (setq this-command 'previous-line)
-   (previous-line 5)))
-
-(global-set-key (kbd "M-s M-s") 'shell)
+;; (global-set-key (kbd "C-c ]") 'shrink-window-horizontally)
+;; (global-set-key (kbd "C-c [") 'enlarge-window-horizontally)
+;; (global-set-key (kbd "M-s M-s") 'shell)
 
 ;; dir
 ;; (put 'dired-find-alternate-file 'disabled nil)
@@ -56,7 +51,7 @@
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(package-selected-packages
    (quote
-    (vue-mode company-solidity solidity-mode company-nginx nginx-mode dart-mode gitignore-mode rust-playground c-eldoc elpy company-racer racer markdown-mode company-go poly-markdown go-autocomplete robe mmm-mode inf-ruby go-mode swift-mode company company-quickhelp toml-mode dockerfile-mode yaml-mode web-mode rust-mode))))
+    (bind-key vue-mode company-solidity solidity-mode company-nginx nginx-mode dart-mode gitignore-mode rust-playground c-eldoc elpy company-racer racer markdown-mode company-go poly-markdown go-autocomplete robe mmm-mode inf-ruby go-mode swift-mode company company-quickhelp toml-mode dockerfile-mode yaml-mode web-mode rust-mode))))
 
 ;; <Face>
 (set-face-background 'mode-line nil)
@@ -87,3 +82,4 @@
 (require 'init-rust)
 (require 'init-ruby)
 (require 'init-scheme)
+(require 'init-config)

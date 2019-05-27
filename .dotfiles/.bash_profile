@@ -11,7 +11,7 @@ alias scm="scheme --script"
 alias ss="scheme"
 alias rb="ruby"
 alias cl="clisp"
-alias py="python3 -m"
+alias py="python3"
 alias pip="pip3"
 alias blog="cd $HOME/code/clearloop.github.io"
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
@@ -20,4 +20,3 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 [[ -s ~/.bashrc ]] && source ~/.bashrc
 [[ -s ~/.profile ]] && source ~/.profile
 
-export PATH="$HOME/.cargo/bin:$PATH"

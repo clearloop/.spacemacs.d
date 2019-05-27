@@ -3,16 +3,13 @@
 ;; Install
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
-;; (add-to-list 'auto-mode-alist '("\\.tsx?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.json\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx?" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tsx?" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.babelrc?\\'" . js-mode))
-
-(setq web-mode-content-types-alist
-  '(("jsx" . "\\.js[x]?\\'")))
 
 ;; Customisation
 (defun my-web-mode-hook ()
@@ -73,11 +70,9 @@
 ;; ERB
 ;; Snippets
 (setq web-mode-extra-snippets
-      '(("erb" . (("toto" . "<% toto | %>\n\n<% end %>")))
-        ))
+      '(("erb" . (("toto" . "<% toto | %>\n\n<% end %>")))))
 ;; Auto-pairs
 (setq web-mode-extra-auto-pairs
-      '(("erb"  . (("beg" "end")))
-        ))
+      '(("erb"  . (("beg" "end")))))
 
 (provide 'init-web)
