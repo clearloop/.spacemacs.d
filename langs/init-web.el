@@ -25,6 +25,10 @@
 (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
 (add-to-list 'web-mode-indentation-params '("lineup-ternary" . nil))
 
+;; Types
+(setq web-mode-content-types-alist
+      '(("jsx" . "\\.js[x]?\\'")))
+
 ;; Keys
 (define-key web-mode-map (kbd "C-c /") #'web-mode-element-close)
 
