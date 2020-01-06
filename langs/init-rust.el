@@ -7,6 +7,7 @@
 (require 'rust-mode)
 (define-key rust-mode-map (kbd "TAB") #'company-indent-or-complete-common)
 (setq company-tooltip-align-annotations t)
+(setq rust-format-on-save t)
 
 ;; commands
 (define-key rust-mode-map (kbd "C-c '") 'rust-run)

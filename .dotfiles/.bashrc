@@ -21,9 +21,9 @@ export PATH=/usr/local/sbin:$PATH
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 
 # cargo
-export PATH=$HOME/.cargo/bin:$PATH
-export RUSTUP_DIST_ROOT=https://mirrors.ustc.edu.cn/rust-static
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+# export PATH=$HOME/.cargo/bin:$PATH
+# export RUSTUP_DIST_ROOT=https://mirrors.ustc.edu.cn/rust-static
+# export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 # yarn
 export PATH=/Users/mercury/.local/bin:$PATH
@@ -45,6 +45,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 export GOPATH=$HOME/Library/go
 export PATH=$HOME/Library/go/bin:$PATH
 export GO111MODULE=on
+export GOPROXY=https://goproxy.io
 
 # Javascript
 export REACT_APP_RUNTIME="web"
@@ -63,6 +64,7 @@ export PATH=$ANDROID_SDK_ROOT/emulator:$PATH
 export PATH=$PATH:$HOME/Library/flutter/bin
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+export NO_PROXY=localhost,127.0.0.1
 
 # added by travis gem
 [ -f /Users/mercury/.travis/travis.sh ] && source /Users/mercury/.travis/travis.sh

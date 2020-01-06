@@ -51,7 +51,7 @@
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(package-selected-packages
    (quote
-    (bind-key vue-mode company-solidity solidity-mode company-nginx nginx-mode dart-mode gitignore-mode rust-playground c-eldoc elpy company-racer racer markdown-mode company-go poly-markdown go-autocomplete robe mmm-mode inf-ruby go-mode swift-mode company company-quickhelp toml-mode dockerfile-mode yaml-mode web-mode rust-mode))))
+    (android-mode go-mode go-complete stylus-mode protobuf-mode bind-key vue-mode company-solidity solidity-mode company-nginx nginx-mode gitignore-mode rust-playground c-eldoc elpy company-racer racer markdown-mode company-go poly-markdown robe mmm-mode inf-ruby swift-mode company company-quickhelp toml-mode dockerfile-mode yaml-mode web-mode rust-mode))))
 
 ;; <Face>
 (set-face-background 'mode-line nil)

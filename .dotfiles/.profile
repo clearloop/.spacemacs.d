@@ -7,6 +7,15 @@ function es() {
     open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
 }
 
+# ios
+function ios() {
+    open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
+}
+
+function android() {
+    nohup emulator @avd &
+}
+
 # vpn
 function vpn() {
     sudo brook vpn -l 127.0.0.1:1080 -s $SERVER -p password
@@ -27,6 +36,14 @@ function site() {
 function cleanfile() {
     files=$1
     git filter-branch --force --index-filter \
-        "git rm --cached --ignore-unmatch $files" \
+        "git rm -r --cached --ignore-unmatch $files" \
         --prune-empty --tag-name-filter cat -- --all
 }
+
+#bg
+function bgd() {
+    cmd=$1
+    nohup $cmd > /dev/null 2>&1 &
+}
+
+export PATH="$HOME/.cargo/bin:$PATH"
