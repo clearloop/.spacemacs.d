@@ -46,4 +46,8 @@ function bgd() {
     nohup $cmd > /dev/null 2>&1 &
 }
 
+function fj() {
+    cd "/Users/mercury/Library/go/src/github.com/clearloop/find-a-job/ds"
+}
+
 export PATH="$HOME/.cargo/bin:$PATH"

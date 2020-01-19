@@ -51,7 +51,7 @@
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(package-selected-packages
    (quote
-    (android-mode go-mode go-complete stylus-mode protobuf-mode bind-key vue-mode company-solidity solidity-mode company-nginx nginx-mode gitignore-mode rust-playground c-eldoc elpy company-racer racer markdown-mode company-go poly-markdown robe mmm-mode inf-ruby swift-mode company company-quickhelp toml-mode dockerfile-mode yaml-mode web-mode rust-mode))))
+    (tide android-mode go-mode go-complete stylus-mode protobuf-mode bind-key vue-mode company-solidity solidity-mode company-nginx nginx-mode gitignore-mode rust-playground c-eldoc elpy company-racer racer markdown-mode company-go poly-markdown robe mmm-mode inf-ruby swift-mode company company-quickhelp toml-mode dockerfile-mode yaml-mode web-mode rust-mode))))
 
 ;; <Face>
 (set-face-background 'mode-line nil)
@@ -71,6 +71,10 @@
  c-basic-indent 2
  c-tab-always-indent t)
 (c-set-offset 'brace-list-open 0)
+
+;; ac-complete
+(require 'auto-complete)
+(ac-config-default)
 
 ;; <Paths>
 (add-to-list 'load-path "~/.emacs.d/langs")

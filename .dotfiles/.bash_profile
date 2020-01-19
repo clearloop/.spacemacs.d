@@ -37,7 +37,3 @@ export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 export NVMW_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
 export NVMW_NPM_MIRROR=https://npm.taobao.org/mirrors/npm
 # End of mirror-config-china
-
-function fj() {
-    cd "/Users/mercury/Library/go/src/github.com/clearloop/find-a-job/ds"
-}
