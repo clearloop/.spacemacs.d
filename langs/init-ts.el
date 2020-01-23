@@ -18,9 +18,15 @@
 ;; aligns annotation to the right hand side
 (setq company-tooltip-align-annotations t)
 
+;; add tslint
+;; (flycheck-add-mode 'typescript-tslint 'typescript-mode)
+
 ;; formats the buffer before saving
 (add-hook 'before-save-hook 'tide-format-before-save)
-
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
+(add-hook 'web-mode-hook
+          (lambda ()
+            (when (string-equal "js" (file-name-extension buffer-file-name))
+              (setup-tide-mode))))
 
 (provide 'init-ts)
