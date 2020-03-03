@@ -22,25 +22,6 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-;; <Config>
-;; key-bind
-;; (bind-key* "M-n" (lambda () (interactive)
-;;     (setq this-command 'next-line)
-;;     (next-line 5)))
-;; 
-;; (bind-key* "M-p" (lambda () (interactive)
-;;     (setq this-command 'previous-line)
-;;     (previous-line 5)))
-
-;; (global-set-key (kbd "C-c ]") 'shrink-window-horizontally)
-;; (global-set-key (kbd "C-c [") 'enlarge-window-horizontally)
-;; (global-set-key (kbd "M-s M-s") 'shell)
-
-;; dir
-;; (put 'dired-find-alternate-file 'disabled nil)
-;; (make-directory "~/.emacs.d/backups/" t)
-;; (put 'downcase-region 'disabled nil)
-
 ;; <Variables>
 (menu-bar-mode 0)
 (custom-set-variables
@@ -51,12 +32,12 @@
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(package-selected-packages
    (quote
-    (json-mode tide android-mode go-mode go-complete stylus-mode protobuf-mode bind-key vue-mode company-solidity solidity-mode company-nginx nginx-mode gitignore-mode rust-playground c-eldoc elpy company-racer racer markdown-mode company-go poly-markdown robe mmm-mode inf-ruby swift-mode company company-quickhelp toml-mode dockerfile-mode yaml-mode web-mode rust-mode))))
+    (markdown-mode vimrc-mode multiple-cursors json-mode tide android-mode go-mode go-complete protobuf-mode bind-key company-nginx nginx-mode gitignore-mode c-eldoc elpy company-racer racer company-go  robe mmm-mode inf-ruby company company-quickhelp toml-mode dockerfile-mode yaml-mode web-mode rust-mode))))
 
 ;; <Face>
-(set-face-background 'mode-line nil)
-(set-face-background 'mode-line-inactive nil)
 (custom-set-faces
+ (set-face-background 'mode-line nil)
+ (set-face-background 'mode-line-inactive nil)
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
@@ -72,17 +53,13 @@
  c-tab-always-indent t)
 (c-set-offset 'brace-list-open 0)
 
-;; ac-complete
-(require 'auto-complete)
-(ac-config-default)
-
 ;; <Paths>
 (add-to-list 'load-path "~/.emacs.d/langs")
+(require 'init-ac)
 (require 'init-md)
 (require 'init-go)
 (require 'init-ts)
 (require 'init-web)
-(require 'init-vue)
 (require 'init-dart)
 (require 'init-rust)
 (require 'init-ruby)

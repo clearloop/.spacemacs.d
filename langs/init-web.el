@@ -2,12 +2,13 @@
 
 ;; Install
 (require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.json\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx?" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx?\\'" . typescript-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.babelrc?\\'" . js-mode))
+(add-to-list 'auto-mode-alist '("\\.md?\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.tsx?\\'" . web-mode))
 
 ;; Customisation
@@ -24,10 +25,6 @@
 (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))
 (add-to-list 'web-mode-indentation-params '("lineup-concats" . nil))
 (add-to-list 'web-mode-indentation-params '("lineup-ternary" . nil))
-
-;; Types
-(setq web-mode-content-types-alist
-      '(("jsx" . "\\.js[x]?\\'")))
 
 ;; Keys
 (define-key web-mode-map (kbd "C-c /") #'web-mode-element-close)

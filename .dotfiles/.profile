@@ -16,11 +16,6 @@ function android() {
     nohup emulator @avd &
 }
 
-# vpn
-function vpn() {
-    sudo brook vpn -l 127.0.0.1:1080 -s $SERVER -p password
-}
-
 # serve
 SITES=$HOME/Sites
 function site() {
@@ -46,8 +41,13 @@ function bgd() {
     nohup $cmd > /dev/null 2>&1 &
 }
 
-function fj() {
-    cd "/Users/mercury/Library/go/src/github.com/clearloop/find-a-job/ds"
+
+function proxy() {
+    git config --global http.proxy http://127.0.0.1:1080
+    git config --global https.proxy http://127.0.0.1:1080
 }
 
-export PATH="$HOME/.cargo/bin:$PATH"
+function un_proxy() {
+    git config --global --unset http.proxy
+    git config --global --unset https.proxy
+}
