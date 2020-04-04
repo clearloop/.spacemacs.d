@@ -1,6 +1,7 @@
 (require 'typescript-mode)
 (defun ts-hook ()
-  (setq typescript-indent-level 2))
+  (setq typescript-indent-level 4)
+  )
 (add-hook 'typescript-mode-hook 'ts-hook)
 
 (defun setup-tide-mode ()

@@ -32,7 +32,7 @@
  '(backup-directory-alist (quote ((".*" . "~/.emacs.d/backups/"))))
  '(package-selected-packages
    (quote
-    (markdown-mode vimrc-mode multiple-cursors json-mode tide android-mode go-mode go-complete protobuf-mode bind-key company-nginx nginx-mode gitignore-mode c-eldoc elpy company-racer racer company-go  robe mmm-mode inf-ruby company company-quickhelp toml-mode dockerfile-mode yaml-mode web-mode rust-mode))))
+    (systemd markdown-mode vimrc-mode multiple-cursors json-mode tide android-mode go-mode go-complete protobuf-mode bind-key company-nginx nginx-mode gitignore-mode c-eldoc elpy company-racer racer company-go robe mmm-mode inf-ruby company company-quickhelp toml-mode dockerfile-mode yaml-mode web-mode rust-mode))))
 
 ;; <Face>
 (custom-set-faces
@@ -63,5 +63,6 @@
 (require 'init-dart)
 (require 'init-rust)
 (require 'init-ruby)
+(require 'init-python)
 (require 'init-scheme)
 (require 'init-config)
