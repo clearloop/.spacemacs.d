@@ -8,8 +8,8 @@
 
 (defun shrink-10-units() (interactive)
        (setq this-command 'shrink-window-horizontally)
-       ('shrink-window-horizontally 10))
+       (shrink-window-horizontally 10))
 
 (defun enlarge-10-units() (interactive)
        (setq this-command 'enlarge-window-horizontally)
-       ('enlarge-window-horizontally 10))
+       (enlarge-window-horizontally 10))

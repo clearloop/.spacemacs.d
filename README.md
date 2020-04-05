@@ -1,23 +1,40 @@
-# README
+# clearloop/.spacemacs.d
+
+Light config about `spacemacs` and my `dotfile` stuffs.
 
 ## Install
-```
-curl https://raw.githubusercontent.com/clearloop/.emacs.d/master/.dotfiles/install -sSf | sh
+
+```shell
+mv ~/.emacs.d ~/.emacs.d.bak
+git clone https://github.com/syl20bnr/spacemacs.git
+git clone https://github.com/clearloop/.spacemacs.d.git
 ```
 
-## Decoration
+## Emacs configs
 ```lisp
-(set-face-background 'mode-line "transparent")
-(set-face-background 'mode-line-inactive "transparent")
+;;; Spacemacs/user-*
+
+(defun dotspacemacs/user-init ()
+  "Package independent settings to run before `dotspacemacs/user-config'."
+  (add-to-list 'custom-theme-load-path "~/.spacemacs.d/themes")
+  (setq backup-directory-alist
+        `((".*" . ,temporary-file-directory)))
+  (setq auto-save-file-name-transforms
+        `((".*" ,temporary-file-directory t)))
+  (setq custom-file "~/.spacemacs.d/.custom.el"))
+
+(defun dotspacemacs/user-config ()
+  "Configuration that cannot be delegated to layers."
+  (xterm-mouse-mode -1)
+  )
 ```
 
-## Global Shortcuts
-| Kbd         | Usage                          |
-|-------------|--------------------------------|
-| `M-n`       | ('next-line 5)                 |
-| `M-p`       | ('previous-line 5)             |
-| `M-[`       | ('shrink-window-horizontally)  |
-| `M-]`       | ('enlarge-window-horizontally) |
-| `M-s` `M-s` | ('shell)                       |
-| `M-s` `M-e` | ('shell-command)               |
-
+## Keybindings
+```lisp
+(bind-keys*
+ ("M-n" . next-5-lines)
+ ("M-p" . prev-5-lines)
+ ("M-{" . shrink-10-units)
+ ("M-}" . enlarge-10-units)
+ )
+```

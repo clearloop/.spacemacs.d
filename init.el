@@ -7,7 +7,9 @@
   (setq-default
    dotspacemacs-distribution 'spacemacs-base
    dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers")
-   dotspacemacs-configuration-layers '(auto-completion python ivy emacs-lisp cydonia)
+   dotspacemacs-configuration-layers '(
+                                       markdown
+                                       markdownauto-completion python ivy emacs-lisp cydonia)
 
    dotspacemacs-additional-packages '()
    dotspacemacs-frozen-packages '()
@@ -31,12 +33,16 @@
    dotspacemacs-leader-key        "SPC"
    ))
 
-;; inif configs
+;;; Spacemacs/user-*
+
 (defun dotspacemacs/user-init ()
   "Package independent settings to run before `dotspacemacs/user-config'."
-  (setq custom-file "~/.spacemacs.d/.custom.el")
-  (add-to-list 'custom-theme-load-path "~/.spacemacs.d/themes"))
-
+  (add-to-list 'custom-theme-load-path "~/.spacemacs.d/themes")
+  (setq backup-directory-alist
+        `((".*" . ,temporary-file-directory)))
+  (setq auto-save-file-name-transforms
+        `((".*" ,temporary-file-directory t)))
+  (setq custom-file "~/.spacemacs.d/.custom.el"))
 
 (defun dotspacemacs/user-config ()
   "Configuration that cannot be delegated to layers."
