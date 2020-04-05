@@ -1,3 +1,8 @@
+# system
+# ======
+export PS1=' 𝝺 '
+export TERM="xterm-256color"
+
 # Applications
 # ============
 export PATH=$HOME/Library/bin:$PATH
@@ -67,3 +72,8 @@ export PATH=$PATH:$HOME/Library/flutter/bin
 export PUB_HOSTED_URL=https://pub.flutter-io.cn
 export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 export NO_PROXY=localhost,127.0.0.1
+
+
+# bashrc
+[[ -s ~/.bashrc ]] && source ~/.bashrc
+[[ -s ~/.profile ]] && source ~/.profile

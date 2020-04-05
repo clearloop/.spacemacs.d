@@ -27,11 +27,9 @@
 ;;   define the functions `cydonia/pre-init-PACKAGE' and/or
 ;;   `cydonia/post-init-PACKAGE' to customize the package as it is loaded.
 
+
 ;;; Code:
+(defconst cydonia-packages '())
 
 
-(defconst config-packages '(
-                            python
-                            ivy
-                            emacs-lisp))
 ;;; packages.el ends here
