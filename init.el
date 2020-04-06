@@ -6,19 +6,18 @@
   "Instantiate Spacemacs layers declarations and package configurations."
   (setq-default
    dotspacemacs-distribution 'spacemacs-base
-   dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers")
    dotspacemacs-configuration-layers
-   '(
-     markdown
-     auto-completion
-     python
-     ivy
-     emacs-lisp
-     cydonia)
-
+   '(;; core
+     osx ivy syntax-checking better-defaults auto-completion
+     ;; (spell-checking :variables spell-checking-enable-by-default nil)
+     spell-checking
+     ;; Mark ups
+     yaml markdown neotree
+     ;; languages
+     go rust python typescript cydonia)
    dotspacemacs-additional-packages '()
    dotspacemacs-frozen-packages '()
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(cydonia-theme)
    ))
 
 ;;; Spacemacs/init
@@ -30,7 +29,9 @@
    dotspacemacs-check-for-update nil
    dotspacemacs-elpa-subdirectory nil
    dotspacemacs-editing-style 'emacs
-
+   dotspacemacs-persistent-server t
+   dotspacemacs-whitespace-cleanup 'all
+   dotspacemacs-mode-line-theme 'custom
    ;; The following are unchanged but are still required for reloading via
    ;; 'SPC f e R' `dotspacemacs/sync-configuration-layers' to not throw warnings
    dotspacemacs-emacs-leader-key  "M-m"
@@ -51,7 +52,10 @@
 
 (defun dotspacemacs/user-config ()
   "Configuration that cannot be delegated to layers."
+  (neotree-show)
+  (neotree-dir "../")
+  (other-window 1)
   (xterm-mouse-mode -1))
 
 ;; Do not write anything past this comment. This is where Emacs will
-;; auto-generate custom variable qdefinitions.
+;; auto-generate custom variable definitions.

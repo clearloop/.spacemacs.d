@@ -1,9 +1,11 @@
 (deftheme cydonia
   "Created 2020-04-05.")
 
+;; face sheet
 (custom-theme-set-faces
  'cydonia
  ;; vendors
+ '(default ((t (:family "default" :foundry "default" :width normal :height 1 :weight normal :slant normal :underline nil :overline nil :strike-through nil :box nil :inverse-video nil :foreground "white" :background "black" :stipple nil :inherit nil))))
  '(cursor ((t (:background "red"))))
  '(fixed-pitch ((t (:family "Monospace"))))
  '(variable-pitch ((((type w32)) (:foundry "outline" :family "Arial")) (t (:family "Sans Serif"))))
@@ -17,18 +19,19 @@
  '(trailing-whitespace ((t (:background "#008787"))))
 
  ;; font-lock
- ;; '(font-lock-builtin-face ((t (:foreground "#268bd2"))))
+ ;; keep default settings
+ '(font-lock-builtin-face ((t (:foreground "dark slate blue"))))
+ '(font-lock-string-face ((t (:foreground "VioletRed4"))))
  '(font-lock-comment-delimiter-face ((default (:inherit (font-lock-comment-face)))))
  '(font-lock-comment-face ((t (:background "#0a0a0a" :foreground "#6f6f6f"))))
  '(font-lock-constant-face ((t (:foreground "#d75fd7"))))
  '(font-lock-doc-face ((t (:foreground "#008787"))))
  '(font-lock-function-name-face ((t (:foreground "#268bd2" :inherit (bold)))))
  '(font-lock-keyword-face ((t (:foreground "#d75fd7" :inherit (bold)))))
- '(font-lock-negation-char-face ((t (:foreground "#d75fd7"))))
+ '(font-lock-negation-char-face ((t (:foreground "#d75fd7" :inherit (bold)))))
  '(font-lock-preprocessor-face ((t (:foreground "#d75fd7"))))
  '(font-lock-regexp-grouping-backslash ((t (:inherit (bold)))))
  '(font-lock-regexp-grouping-construct ((t (:inherit (bold)))))
- ;; '(font-lock-string-face ((t (:foreground "#2aa198"))))
  '(font-lock-type-face ((t (:foreground "#df005f" :inherit (bold)))))
  '(font-lock-variable-name-face ((t (:foreground "#8787d7"))))
  '(font-lock-warning-face ((t (:foreground "#dc752f" :background "#262626"))))
@@ -37,7 +40,7 @@
  '(button ((t (:inherit (link)))))
  '(link ((t (:underline (:color foreground-color :style line) :foreground "#008787"))))
  '(link-visited ((t (:underline (:color foreground-color :style line) :foreground "#d75fd7"))))
- '(fringe ((t (:background "color-16" :foreground "brightblack"))))
+ '(fringe ((t (:background "black" :foreground "#b2b2b2"))))
  '(header-line ((t (:background "#080808"))))
  '(tooltip ((t (:weight normal :slant normal :underline nil :foreground "#b2b2b2" :background "#333333"))))
 
