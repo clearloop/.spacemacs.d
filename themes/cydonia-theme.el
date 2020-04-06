@@ -10,7 +10,7 @@
  '(escape-glyph ((((background dark)) (:foreground "cyan")) (((type pc)) (:foreground "magenta")) (t (:foreground "brown"))))
  '(homoglyph ((((background dark)) (:foreground "cyan")) (((type pc)) (:foreground "magenta")) (t (:foreground "brown"))))
  '(minibuffer-prompt ((t (:foreground "#268bd2" :inherit (bold)))))
- '(highlight ((t (:background "blue"))))
+ '(highlight ((t (:background "#000059"))))
  '(region ((t (:background "cyan"))))
  '(shadow ((t (:foreground "#585858"))))
  '(secondary-selection ((t (:background "#121212"))))

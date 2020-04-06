@@ -7,9 +7,14 @@
   (setq-default
    dotspacemacs-distribution 'spacemacs-base
    dotspacemacs-configuration-layer-path '("~/.spacemacs.d/layers")
-   dotspacemacs-configuration-layers '(
-                                       markdown
-                                       markdownauto-completion python ivy emacs-lisp cydonia)
+   dotspacemacs-configuration-layers
+   '(
+     markdown
+     auto-completion
+     python
+     ivy
+     emacs-lisp
+     cydonia)
 
    dotspacemacs-additional-packages '()
    dotspacemacs-frozen-packages '()
@@ -46,8 +51,7 @@
 
 (defun dotspacemacs/user-config ()
   "Configuration that cannot be delegated to layers."
-  (xterm-mouse-mode -1)
-  )
+  (xterm-mouse-mode -1))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable qdefinitions.

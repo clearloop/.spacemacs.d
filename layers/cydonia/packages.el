@@ -29,7 +29,11 @@
 
 
 ;;; Code:
-(defconst cydonia-packages '())
+(defconst cydonia-packages '(python))
+
+(defun cydonia/post-init-python()
+  (bind-key "C-c p" 'python-execute-file)
+  (setq python-shell-completion-native-enable nil))
 
 
 ;;; packages.el ends here

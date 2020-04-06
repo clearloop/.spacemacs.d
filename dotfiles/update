@@ -1,12 +1,10 @@
 #!/usr/bin/env sh
-rm $HOME/.spacemacs.d/dotfiles/.bashrc
-rm $HOME/.spacemacs.d/dotfiles/.profile
-rm $HOME/.spacemacs.d/dotfiles/.bash_profile
+rm $HOME/.spacemacs.d/dotfiles/.zshrc
+rm $HOME/.spacemacs.d/dotfiles/.zshenv
 rm $HOME/.spacemacs.d/dotfiles/.tmux.conf
 
-cp $HOME/.bashrc ~/.spacemacs.d/dotfiles
-cp $HOME/.profile ~/.spacemacs.d/dotfiles
-cp $HOME/.bash_profile ~/.spacemacs.d/dotfiles
+cp $HOME/.zshrc ~/.spacemacs.d/dotfiles
+cp $HOME/.zshenv ~/.spacemacs.d/dotfiles
 cp $HOME/.tmux.conf ~/.spacemacs.d/dotfiles
 
 echo "Files have updated."
