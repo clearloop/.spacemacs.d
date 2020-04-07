@@ -1,9 +1,9 @@
+**/*.DS_Store
 /backups
 /auto-save-list
 /elpa
 /*data
 /*dat
 /timelog
-/.DS_Store
 /.mc-lists.el
 /.custom.el

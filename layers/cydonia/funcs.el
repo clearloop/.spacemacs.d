@@ -13,3 +13,8 @@
 (defun enlarge-10-units() (interactive)
        (setq this-command 'enlarge-window-horizontally)
        (enlarge-window-horizontally 10))
+
+(defun open-neo-tree() (interactive)
+       "open neo-tree after on emacs connection"
+       (neotree-show)
+       (neotree-dir "../"))

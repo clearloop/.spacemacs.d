@@ -8,13 +8,13 @@
    dotspacemacs-distribution 'spacemacs-base
    dotspacemacs-configuration-layers
    '(;; core
-     osx ivy syntax-checking better-defaults auto-completion
-     ;; (spell-checking :variables spell-checking-enable-by-default nil)
-     spell-checking
+     osx ivy spell-checking syntax-checking better-defaults auto-completion
      ;; Mark ups
      yaml markdown neotree
      ;; languages
-     go rust python typescript cydonia)
+     go rust python
+     (typescript :variables typescript-fmt-on-save t)
+     cydonia)
    dotspacemacs-additional-packages '()
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '(cydonia-theme)
@@ -52,9 +52,6 @@
 
 (defun dotspacemacs/user-config ()
   "Configuration that cannot be delegated to layers."
-  (neotree-show)
-  (neotree-dir "../")
-  (other-window 1)
   (xterm-mouse-mode -1))
 
 ;; Do not write anything past this comment. This is where Emacs will
