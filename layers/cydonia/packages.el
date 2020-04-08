@@ -29,4 +29,11 @@
 
 
 ;;; Code:
-(defconst cydonia-packages '())
+(defconst cydonia-packages '(js-doc))
+
+(defun cydonia/post-init-js-doc()
+  (add-hook
+   'tide-mode-hook
+   (lambda ()
+     (define-key tide-mode-map "\C-ci" 'js-comment)
+     (define-key tide-mode-map "@" 'js-doc-insert-tag))))

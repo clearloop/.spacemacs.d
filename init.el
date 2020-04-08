@@ -8,12 +8,13 @@
    dotspacemacs-distribution 'spacemacs-base
    dotspacemacs-configuration-layers
    '(;; core
-     osx ivy spell-checking syntax-checking better-defaults auto-completion
+     ivy syntax-checking better-defaults auto-completion
      ;; Mark ups
-     yaml markdown neotree
+     yaml markdown neotree git shell
      ;; languages
-     go rust python
+     go rust python javascript shell-scripts
      (typescript :variables typescript-fmt-on-save t)
+     ;; self-configs
      cydonia)
    dotspacemacs-additional-packages '()
    dotspacemacs-frozen-packages '()
@@ -31,7 +32,7 @@
    dotspacemacs-editing-style 'emacs
    dotspacemacs-persistent-server t
    dotspacemacs-whitespace-cleanup 'all
-   dotspacemacs-mode-line-theme 'custom
+   dotspacemacs-mode-line-theme 'spacemacs
    ;; The following are unchanged but are still required for reloading via
    ;; 'SPC f e R' `dotspacemacs/sync-configuration-layers' to not throw warnings
    dotspacemacs-emacs-leader-key  "M-m"
