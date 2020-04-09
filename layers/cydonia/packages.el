@@ -35,5 +35,5 @@
   (add-hook
    'tide-mode-hook
    (lambda ()
-     (define-key tide-mode-map "\C-ci" 'js-comment)
-     (define-key tide-mode-map "@" 'js-doc-insert-tag))))
+     (define-key typescript-mode-map "\C-ci" 'js-comment))))
+;; (define-key tide-mode-map "@" 'js-doc-insert-tag))))

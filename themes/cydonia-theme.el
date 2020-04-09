@@ -23,7 +23,7 @@
  '(font-lock-builtin-face ((t (:foreground "dark slate blue"))))
  '(font-lock-comment-delimiter-face ((default (:inherit (font-lock-comment-face)))))
  '(font-lock-comment-face ((t (:slant normal :background "#0c0c0c" :foreground "#6f6f6f"))))
- '(font-lock-constant-face ((t (:foreground "#afafaf"))))
+ '(font-lock-constant-face ((t (:foreground "#8787d7"))))
  '(font-lock-doc-face ((t (:slant normal :background "#0c0c0c" :foreground "#6f6f6f"))))
  '(font-lock-function-name-face ((t (:foreground "#af875f"))))
  '(font-lock-keyword-face ((t (:slant normal :foreground "#d75fd7"))))
@@ -33,7 +33,7 @@
  '(font-lock-regexp-grouping-construct ((t (:inherit (bold)))))
  '(font-lock-string-face ((t (:foreground "VioletRed4"))))
  '(font-lock-type-face ((t (:foreground "#268bd2"))))
- '(font-lock-variable-name-face ((t (:foreground "#8787d7"))))
+ '(font-lock-variable-name-face ((t (:foreground "#8787d7" :inherit (bold)o))))
  '(font-lock-warning-face ((t (:foreground "#dc752f" :background "#262626"))))
 
  ;;  event components

@@ -3,14 +3,6 @@
        "create new frame and move to it"
        (display-buffer-other-frame "*spacemacs*"))
 
-;; (defun next-frame() (interactive)
-;;        "switch next frame"
-;;        (other-frame 2))
-
-(defun prev-frame() (interactive)
-       "switch previous frame"
-       (other-frame -1))
-
 ;; cursor
 
 (defun next-5-lines() (interactive)

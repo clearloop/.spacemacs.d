@@ -10,13 +10,14 @@
    '(;; core
      ivy syntax-checking better-defaults auto-completion
      ;; Mark ups
-     yaml markdown neotree git shell
+     yaml markdown neotree git shell lsp
      ;; languages
-     go rust python javascript shell-scripts
+     go rust javascript shell-scripts
+     (python :variables python-backend 'lsp python-lsp-server 'mspyls)
      (typescript :variables typescript-fmt-on-save t)
      ;; self-configs
      cydonia)
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(graphql-mode)
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '(cydonia-theme)
    ))
