@@ -23,6 +23,7 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 # cargo
 export PATH=$HOME/.cargo/bin:$PATH
 export SCCACHE_CACHE_SIZE='20G'
+export RUSTUP_DIST_SERVER='https://mirrors.tuna.tsinghua.edu.cn/rustup'
 
 # yarn
 export PATH=/Users/mercury/.local/bin:$PATH
@@ -32,7 +33,8 @@ export NETLIFY_AUTH_TOKEN=d9ce2ccd45fe2ecd11b3aa5fdc898cd4c46c3a204afa808642dbd8
 # Language Settings
 # =================
 # Node
-export PATH="/usr/local/opt/node@10/bin:$PATH"
+export PATH="/usr/local/opt/node@12/bin:$PATH"
+export PATH="$HOME/.config/npm/bin:$PATH"
 
 # Ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"
@@ -71,3 +73,7 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 # PROXY
 # =====
 export no_proxy=localhost,127.0.0.1,0.0.0.0
+
+# CODE
+# ====
+export CODE=/Volumes/Mercury/code

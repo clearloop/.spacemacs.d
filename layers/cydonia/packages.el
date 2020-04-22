@@ -29,11 +29,36 @@
 
 
 ;;; Code:
-(defconst cydonia-packages '(js-doc))
+(defconst cydonia-packages
+  '(rust-mode json-mode typescript-mode python-mode))
 
-(defun cydonia/post-init-js-doc()
+(defun cydonia/post-init-rust-mode()
   (add-hook
-   'tide-mode-hook
+   'rust-mode-hook
    (lambda ()
-     (define-key typescript-mode-map "\C-ci" 'js-comment))))
-;; (define-key tide-mode-map "@" 'js-doc-insert-tag))))
+     (setq rust-format-on-save t))))
+
+(defun cydonia/post-init-json-mode()
+  (add-hook
+   'json-mode-hook
+   (lambda ()
+     (make-local-variable 'js-indent-level)
+     (setq js-indent-level 2)
+     ;; (setq js2-basic-offset 2)
+     (setq json-format-on-save t)
+     (setq json-fmt-tool 'web-beautify))))
+
+(defun cydonia/post-init-typescript-mode()
+  (add-hook
+   'typescript-mode-hook
+   (lambda ()
+     (setq typescript-format-on-save t))))
+
+(defun cydonia/post-init-python-mode()
+  (add-hook
+   'python-mode-hook
+   (lambda ()
+     (setq python-backend 'lsp)
+     (setq python-lsp-server 'mspyls)
+     (setq python-format-on-save t))))
+

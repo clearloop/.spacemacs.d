@@ -7,14 +7,13 @@
   (setq-default
    dotspacemacs-distribution 'spacemacs-base
    dotspacemacs-configuration-layers
-   '(;; core
+   '(vimscript
+     ;; core
      ivy syntax-checking better-defaults auto-completion
      ;; Mark ups
-     yaml markdown neotree git shell lsp
+     yaml markdown neotree git shell lsp json cmake
      ;; languages
-     go rust javascript shell-scripts
-     (python :variables python-backend 'lsp python-lsp-server 'mspyls)
-     (typescript :variables typescript-fmt-on-save t)
+     go javascript shell rust typescript python dart
      ;; self-configs
      cydonia)
    dotspacemacs-additional-packages '(graphql-mode)
@@ -31,7 +30,6 @@
    dotspacemacs-check-for-update nil
    dotspacemacs-elpa-subdirectory nil
    dotspacemacs-editing-style 'emacs
-   dotspacemacs-persistent-server t
    dotspacemacs-whitespace-cleanup 'all
    dotspacemacs-mode-line-theme 'spacemacs
    ;; The following are unchanged but are still required for reloading via
