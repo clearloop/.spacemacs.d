@@ -30,35 +30,11 @@
 
 ;;; Code:
 (defconst cydonia-packages
-  '(rust-mode json-mode typescript-mode python-mode))
-
-(defun cydonia/post-init-rust-mode()
-  (add-hook
-   'rust-mode-hook
-   (lambda ()
-     (setq rust-format-on-save t))))
+  '(json-mode))
 
 (defun cydonia/post-init-json-mode()
   (add-hook
    'json-mode-hook
    (lambda ()
      (make-local-variable 'js-indent-level)
-     (setq js-indent-level 2)
-     ;; (setq js2-basic-offset 2)
-     (setq json-format-on-save t)
-     (setq json-fmt-tool 'web-beautify))))
-
-(defun cydonia/post-init-typescript-mode()
-  (add-hook
-   'typescript-mode-hook
-   (lambda ()
-     (setq typescript-format-on-save t))))
-
-(defun cydonia/post-init-python-mode()
-  (add-hook
-   'python-mode-hook
-   (lambda ()
-     (setq python-backend 'lsp)
-     (setq python-lsp-server 'mspyls)
-     (setq python-format-on-save t))))
-
+     (setq js-indent-level 2))))

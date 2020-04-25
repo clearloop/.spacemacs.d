@@ -6,16 +6,7 @@
   "Instantiate Spacemacs layers declarations and package configurations."
   (setq-default
    dotspacemacs-distribution 'spacemacs-base
-   dotspacemacs-configuration-layers
-   '(vimscript
-     ;; core
-     ivy syntax-checking better-defaults auto-completion
-     ;; Mark ups
-     yaml markdown neotree git shell lsp json cmake
-     ;; languages
-     go javascript shell rust typescript python dart
-     ;; self-configs
-     cydonia)
+   dotspacemacs-configuration-layers '(cydonia)
    dotspacemacs-additional-packages '(graphql-mode)
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '(cydonia-theme)

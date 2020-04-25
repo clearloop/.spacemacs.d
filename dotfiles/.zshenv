@@ -44,9 +44,8 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 
 # Go
 export GOPATH=$HOME/Library/go
-export PATH=$HOME/Library/go/bin:$PATH
-export GO111MODULE=on
 export GOPROXY=https://goproxy.io
+export PATH=$HOME/Library/go/bin:$PATH
 
 # WASM
 export PATH=$HOME/code/binaryen/bin:$PATH
