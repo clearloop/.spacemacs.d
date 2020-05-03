@@ -45,6 +45,7 @@ export PKG_CONFIG_PATH="/usr/local/opt/ruby/lib/pkgconfig"
 # Go
 export GOPATH=$HOME/Library/go
 export GOPROXY=https://goproxy.io
+export GO111MODULE=on
 export PATH=$HOME/Library/go/bin:$PATH
 
 # WASM
@@ -76,3 +77,6 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 # CODE
 # ====
 export CODE=/Volumes/Mercury/code
+
+# DOCKER
+export DOCKER_OPTS="--registry=https://registry.docker-cn.com"

@@ -4,9 +4,9 @@
    ;; core
    ivy syntax-checking better-defaults auto-completion
    ;; Mark ups
-   yaml markdown neotree git shell lsp cmake html vimscript
+   yaml markdown neotree git shell lsp cmake html vimscript emoji
    ;; languages
-   javascript shell dart
+   javascript shell dart protobuf ruby
    (go
     :variables
     go-format-before-save t

@@ -7,7 +7,7 @@
   (setq-default
    dotspacemacs-distribution 'spacemacs-base
    dotspacemacs-configuration-layers '(cydonia)
-   dotspacemacs-additional-packages '(graphql-mode)
+   dotspacemacs-additional-packages '(graphql-mode jest)
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '(cydonia-theme)
    ))
