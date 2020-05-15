@@ -6,7 +6,7 @@
    ;; Mark ups
    yaml markdown neotree git shell lsp cmake html vimscript emoji
    ;; languages
-   javascript shell dart protobuf ruby
+   javascript shell dart protobuf ruby nginx
    (go
     :variables
     go-format-before-save t

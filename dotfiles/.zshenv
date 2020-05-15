@@ -80,3 +80,6 @@ export CODE=/Volumes/Mercury/code
 
 # DOCKER
 export DOCKER_OPTS="--registry=https://registry.docker-cn.com"
+
+# ENV
+# source "~/.env"
