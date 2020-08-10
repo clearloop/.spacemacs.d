@@ -19,6 +19,9 @@ alias pcs="proxychains4 -q"
 alias code="cd /Volumes/Mercury/code"
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 
+# tests
+alias darwinia="/Volumes/Mercury/code/darwinia-common/target/release/node-template"
+
 # proxy
 # =====
 # alias proxy='export all_proxy=socks5://127.0.0.1:1080'
@@ -39,3 +42,20 @@ function unproxy() {
     unset HTTPS_PROXY
     curl cip.cc
 }
+
+function es() {
+    nohup emulator @avd &
+    open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
+}
+
+function ios() {
+    open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
+}
+
+function android-s() {
+    nohup emulator @avd &
+}
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/mercury/.sdkman"
+[[ -s "/Users/mercury/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/mercury/.sdkman/bin/sdkman-init.sh"

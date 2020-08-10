@@ -3,10 +3,13 @@
  '(
    ;; core
    ivy syntax-checking better-defaults auto-completion
+   (lsp :variables lsp-rust-server 'rust-analyzer)
+   (docker :variables docker-dockerfile-backend 'lsp)
+
    ;; Mark ups
-   yaml markdown neotree git shell lsp cmake html vimscript emoji
+   yaml markdown neotree git shell cmake html vimscript emoji
    ;; languages
-   javascript shell dart protobuf ruby nginx
+   javascript shell dart protobuf ruby nginx kotlin swift php
    (go
     :variables
     go-format-before-save t

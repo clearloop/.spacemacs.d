@@ -57,7 +57,7 @@ export REACT_APP_RUNTIME="web"
 # Applications Developing Tools
 # =============================
 # Android
-export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/tools/bin:$PATH
@@ -77,9 +77,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 # CODE
 # ====
 export CODE=/Volumes/Mercury/code
+export INFURA_KEY=https://mainnet.infura.io/v3/48751b4dbbc84894a1fa3197b6446ec2
 
 # DOCKER
 export DOCKER_OPTS="--registry=https://registry.docker-cn.com"
-
-# ENV
-# source "~/.env"
