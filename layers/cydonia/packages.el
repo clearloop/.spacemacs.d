@@ -30,7 +30,7 @@
 
 ;;; Code:
 (defconst cydonia-packages
-  '(json-mode dart-mode))
+  '(json-mode dart-mode rust-mode))
 
 (defun cydonia/post-init-json-mode()
   (add-hook
@@ -43,4 +43,11 @@
   (add-hook
    'dart-mode-hook
    (lambda ()
-     (add-hook 'after-save-hook 'auto-reload nil 'make-it-local))))
+     (add-hook 'after-save-hook 'auto-reload-flutter nil 'make-it-local))))
+
+(defun cydonia/post-init-rust-mode()
+  (add-hook
+   'rust-mode-hook
+   (lambda ()
+     (if (string-match "substrate" buffer-file-name)
+         (rust-disable-format-on-save)))))

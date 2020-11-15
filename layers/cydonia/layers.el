@@ -3,7 +3,7 @@
  '(
    ;; core
    ivy syntax-checking better-defaults auto-completion
-   (lsp :variables lsp-rust-server 'rust-analyzer)
+   (lsp :variables lsp-rust-server 'rls)
    (docker :variables docker-dockerfile-backend 'lsp)
 
    ;; Mark ups

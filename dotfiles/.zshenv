@@ -77,7 +77,15 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 # CODE
 # ====
 export CODE=/Volumes/Mercury/code
-export INFURA_KEY=https://mainnet.infura.io/v3/48751b4dbbc84894a1fa3197b6446ec2
+# export ETHEREUM_RPC=http://geth.darwinia.network.l2me.com
+export ETHEREUM_RPC='https://ropsten.infura.io/v3/48751b4dbbc84894a1fa3197b6446ec2, https://ropsten.infura.io/v3/48751b4dbbc84894a1fa3197b6446ec2'
 
 # DOCKER
 export DOCKER_OPTS="--registry=https://registry.docker-cn.com"
+
+# SUBSTRATE
+# =========
+export WASM_BUILD_TOOLCHAIN=nightly-2020-10-05
+
+# EMACS
+export XCARGO_RUST_SRC="$(rustc --print sysroot)/lib/rustlib/src/rust/src"

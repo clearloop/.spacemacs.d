@@ -6,7 +6,8 @@
   "Instantiate Spacemacs layers declarations and package configurations."
   (setq-default
    dotspacemacs-distribution 'spacemacs-base
-   dotspacemacs-configuration-layers '(cydonia)
+   dotspacemacs-configuration-layers '(systemd
+                                       cydonia)
    dotspacemacs-additional-packages '(graphql-mode jest)
    dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '(cydonia-theme)
@@ -18,7 +19,7 @@
   "Instantiate Spacemacs core settings."
   (setq-default
    dotspacemacs-themes '(cydonia)
-   dotspacemacs-check-for-update nil
+   dotspacemacs-check-for-update t
    dotspacemacs-elpa-subdirectory nil
    dotspacemacs-editing-style 'emacs
    dotspacemacs-whitespace-cleanup 'all
@@ -28,13 +29,18 @@
    dotspacemacs-emacs-leader-key  "M-m"
    dotspacemacs-emacs-command-key "SPC"
    dotspacemacs-leader-key        "SPC"
-   ))
+   )
+  (setq configuration-layer-elpa-archives
+    '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+      ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+      ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/"))))
 
 ;;; Spacemacs/user-*
 
 (defun dotspacemacs/user-init ()
   "Package independent settings to run before `dotspacemacs/user-config'."
   (add-to-list 'custom-theme-load-path "~/.spacemacs.d/themes")
+  (add-to-list 'auto-mode-alist '("\\.wat$" . lisp-mode))
   (setq backup-directory-alist
         `((".*" . ,temporary-file-directory)))
   (setq auto-save-file-name-transforms

@@ -43,6 +43,11 @@ function unproxy() {
     curl cip.cc
 }
 
+function itering() {
+    export http_proxy=http://192.168.200.253:8080
+    export https_proxy=http://192.168.200.253:8080
+}
+
 function es() {
     nohup emulator @avd &
     open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app
@@ -54,6 +59,14 @@ function ios() {
 
 function android-s() {
     nohup emulator @avd &
+}
+
+function cmx() {
+    defaults write com.macpaw.zh.CleanMyMac4 AppleLanguages '("en")'
+}
+
+function grarb() {
+    git branch -r | grep 'origin' | grep -v 'master$' | grep -v HEAD | cut -d/ -f2- | while read line; do git push origin :heads/$line; done;
 }
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
