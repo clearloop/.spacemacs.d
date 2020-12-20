@@ -7,3 +7,4 @@
 /timelog
 /.mc-lists.el
 /.custom.el
+.spacemacs.env

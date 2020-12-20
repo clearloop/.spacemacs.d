@@ -17,7 +17,7 @@
   "Instantiate Spacemacs core settings."
   (setq-default
    dotspacemacs-themes '(cydonia)
-   dotspacemacs-check-for-update t
+   dotspacemacs-check-for-update nil
    dotspacemacs-elpa-subdirectory nil
    dotspacemacs-editing-style 'emacs
    dotspacemacs-whitespace-cleanup 'all
@@ -27,11 +27,7 @@
    dotspacemacs-emacs-leader-key  "M-m"
    dotspacemacs-emacs-command-key "SPC"
    dotspacemacs-leader-key        "SPC"
-   )
-  (setq configuration-layer-elpa-archives
-    '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-      ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-      ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/"))))
+   ))
 
 ;;; Spacemacs/user-*
 
@@ -45,8 +41,8 @@
   (setq custom-file "~/.spacemacs.d/.custom.el"))
 
 (defun dotspacemacs/user-config ()
-  "Configuration that cannot be delegated to layers."
-  (require 'wat-mode))
+  (require 'wat-mode)
+  "Configuration that cannot be delegated to layers.")
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

@@ -53,6 +53,7 @@
          (rust-disable-format-on-save)))))
 
 (defun cydonia/pre-init-dap-mode ()
+  (dap-ui-controls-mode -1)
   (pcase (spacemacs//java-backend)
     (`lsp (add-to-list 'spacemacs--dap-supported-modes 'rust-mode)))
   (add-hook 'rust-mode-local-vars-hook #'spacemacs//rust-setup-dap))

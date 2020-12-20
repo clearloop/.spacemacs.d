@@ -2,7 +2,7 @@
 (configuration-layer/declare-layers
  '(
    ;; core
-   ivy syntax-checking better-defaults auto-completion dap neotree
+   ivy syntax-checking auto-completion dap neotree
    (lsp :variables lsp-rust-server 'rls)
    (docker :variables docker-dockerfile-backend 'lsp)
 
