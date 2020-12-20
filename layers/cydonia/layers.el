@@ -2,12 +2,13 @@
 (configuration-layer/declare-layers
  '(
    ;; core
-   ivy syntax-checking better-defaults auto-completion
+   ivy syntax-checking better-defaults auto-completion dap neotree
    (lsp :variables lsp-rust-server 'rls)
    (docker :variables docker-dockerfile-backend 'lsp)
 
    ;; Mark ups
-   yaml markdown neotree git shell cmake html vimscript emoji
+   yaml markdown git shell cmake html vimscript emoji systemd
+
    ;; languages
    javascript shell dart protobuf ruby nginx kotlin swift php
    (go

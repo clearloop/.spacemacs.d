@@ -6,10 +6,8 @@
   "Instantiate Spacemacs layers declarations and package configurations."
   (setq-default
    dotspacemacs-distribution 'spacemacs-base
-   dotspacemacs-configuration-layers '(systemd
-                                       cydonia)
-   dotspacemacs-additional-packages '(graphql-mode jest)
-   dotspacemacs-frozen-packages '()
+   dotspacemacs-configuration-layers '(cydonia)
+   dotspacemacs-additional-packages '(graphql-mode jest (wat-mode :location local))
    dotspacemacs-excluded-packages '(cydonia-theme)
    ))
 
@@ -40,7 +38,6 @@
 (defun dotspacemacs/user-init ()
   "Package independent settings to run before `dotspacemacs/user-config'."
   (add-to-list 'custom-theme-load-path "~/.spacemacs.d/themes")
-  (add-to-list 'auto-mode-alist '("\\.wat$" . lisp-mode))
   (setq backup-directory-alist
         `((".*" . ,temporary-file-directory)))
   (setq auto-save-file-name-transforms
@@ -49,7 +46,7 @@
 
 (defun dotspacemacs/user-config ()
   "Configuration that cannot be delegated to layers."
-  (xterm-mouse-mode -1))
+  (require 'wat-mode))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.

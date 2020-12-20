@@ -35,6 +35,10 @@
        (setq this-command 'enlarge-window-horizontally)
        (enlarge-window-horizontally 10))
 
+(defun org-config-fill-prefix ()
+  "Set `fill-prefix' to the empty string."
+  (setq fill-prefix ""))
+
 ;; windows
 
 (defun neotree-toggle-x() (interactive)

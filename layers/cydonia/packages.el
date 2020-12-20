@@ -51,3 +51,8 @@
    (lambda ()
      (if (string-match "substrate" buffer-file-name)
          (rust-disable-format-on-save)))))
+
+(defun cydonia/pre-init-dap-mode ()
+  (pcase (spacemacs//java-backend)
+    (`lsp (add-to-list 'spacemacs--dap-supported-modes 'rust-mode)))
+  (add-hook 'rust-mode-local-vars-hook #'spacemacs//rust-setup-dap))

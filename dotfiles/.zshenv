@@ -23,7 +23,7 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 # cargo
 export PATH=$HOME/.cargo/bin:$PATH
 export SCCACHE_CACHE_SIZE='20G'
-export RUSTUP_DIST_SERVER='https://mirrors.tuna.tsinghua.edu.cn/rustup'
+# export RUSTUP_DIST_SERVER='https://mirrors.tuna.tsinghua.edu.cn/rustup'
 
 # yarn
 export PATH=/Users/mercury/.local/bin:$PATH
@@ -50,6 +50,8 @@ export PATH=$HOME/Library/go/bin:$PATH
 
 # WASM
 export PATH=$HOME/code/binaryen/bin:$PATH
+export PATH=$HOME/.wasmer/bin:$PATH
+export PATH=$HOME/.wabt/bin:$PATH
 
 # Javascript
 export REACT_APP_RUNTIME="web"
@@ -74,18 +76,18 @@ export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 # =====
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 
-# CODE
-# ====
-export CODE=/Volumes/Mercury/code
-# export ETHEREUM_RPC=http://geth.darwinia.network.l2me.com
-export ETHEREUM_RPC='https://ropsten.infura.io/v3/48751b4dbbc84894a1fa3197b6446ec2, https://ropsten.infura.io/v3/48751b4dbbc84894a1fa3197b6446ec2'
-
 # DOCKER
 export DOCKER_OPTS="--registry=https://registry.docker-cn.com"
 
 # SUBSTRATE
 # =========
-export WASM_BUILD_TOOLCHAIN=nightly-2020-10-05
+# export WASM_BUILD_TOOLCHAIN=nightly-2020-10-05
 
 # EMACS
 export XCARGO_RUST_SRC="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+export CARGO_NET_GIT_FETCH_WITH_CLI=true
+
+# GDB
+export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
+export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
+export LLVM_DIR='/usr/local/Cellar/llvm/10.0.0_3/lib/cmake'

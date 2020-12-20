@@ -4,3 +4,7 @@
       js-doc-author (format "clearloop <%s>" js-doc-mail-address)
       js-doc-url "https://github.com/darwinia"
       js-doc-license "GPL-3.0")
+
+(dap-ui-controls-mode -1)
+(xterm-mouse-mode -1)
+(add-hook 'org-mode-hook #'org-config-fill-prefix)
