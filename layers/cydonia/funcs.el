@@ -64,3 +64,12 @@
   (if (file-exists-p "/tmp/flutter.pid")
       (shell-command "kill -s SIGUSR1 $(cat /tmp/flutter.pid) && echo 'file saved and sent SIGUSR1 to flutter...'")
     ))
+
+;; buffer
+(defun new-empty-buffer ()
+  "Opens a new empty buffer."
+  (interactive)
+  (switch-to-buffer (generate-new-buffer "untitled"))
+  (funcall initial-major-mode)
+  (put 'buffer-offer-save 'permanent-local t)
+  (setq buffer-offer-save t))
