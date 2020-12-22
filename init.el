@@ -7,7 +7,10 @@
   (setq-default
    dotspacemacs-distribution 'spacemacs-base
    dotspacemacs-configuration-layers '(cydonia)
-   dotspacemacs-additional-packages '(graphql-mode jest (wat-mode :location local))
+   dotspacemacs-additional-packages
+   '(graphql-mode
+     jest
+     (wat-mode :location (recipe :fetcher github :repo devonsparks/wat-mode)))
    dotspacemacs-excluded-packages '(cydonia-theme)
    ))
 
@@ -27,7 +30,11 @@
    dotspacemacs-emacs-leader-key  "M-m"
    dotspacemacs-emacs-command-key "SPC"
    dotspacemacs-leader-key        "SPC"
-   ))
+   )
+  (setq configuration-layer-elpa-archives
+        '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+          ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
+          ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/"))))
 
 ;;; Spacemacs/user-*
 
