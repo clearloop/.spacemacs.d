@@ -17,6 +17,7 @@
 
  ;; move
  ("C-a" . back-to-indentation)
+ ("M-a" . move-to-left-margin)
 
  ;; others
  ("C-c '" . neotree-toggle-x)

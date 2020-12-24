@@ -50,12 +50,31 @@
  '(mode-line-emphasis ((t (:weight bold))))
  '(mode-line-highlight ((((class color) (min-colors 88)) (:box (:line-width 2 :color "grey40" :style released-button))) (t (:inherit (highlight)))))
  '(mode-line-inactive ((t (:box (:line-width 1 :color "#262626" :style nil) :foreground "#2f2f2f" :background "black"))))
+
+ ;; isearch
  '(isearch ((t (:foreground "#262626" :background "#86dc2f"))))
- '(isearch-fail ((((class color) (min-colors 88) (background light)) (:background "RosyBrown1")) (((class color) (min-colors 88) (background dark)) (:background "red4")) (((class color) (min-colors 16)) (:background "red")) (((class color) (min-colors 8)) (:background "red")) (((class color grayscale)) (:foreground "grey")) (t (:inverse-video t))))
+ '(isearch-fail
+   ((((class color) (min-colors 88) (background light)) (:background "RosyBrown1"))
+    (((class color) (min-colors 88) (background dark)) (:background "red4"))
+    (((class color) (min-colors 16)) (:background "red"))
+    (((class color) (min-colors 8)) (:background "red"))
+    (((class color grayscale)) (:foreground "grey"))
+    (t (:inverse-video t))))
  '(lazy-highlight ((t (:weight normal :background "#262626"))))
  '(match ((t (:foreground "#86dc2f" :background "#444444"))))
  '(next-error ((t (:inherit (region)))))
  '(query-replace ((t (:inherit (isearch)))))
+
+ ;; dap
+ '(dap-result-overlay-face ((t (:background "brightblue" :box (:line-width -1 :color "yellow")))))
+
+ ;; lsp
+ '(lsp-ui-doc-background ((t (:background "color-18"))))
  )
+
+;; Enable copy from emacs
+(unless window-system
+  (custom-set-faces
+   '(default ((t (:background "unspecified-bg"))))))
 
 (provide-theme 'cydonia)
