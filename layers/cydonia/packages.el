@@ -30,7 +30,7 @@
 
 ;;; Code:
 (defconst cydonia-packages
-  '(json-mode dart-mode rust-mode))
+  '(json-mode rust-mode))
 
 (defun cydonia/post-init-json-mode()
   (add-hook
@@ -38,12 +38,6 @@
    (lambda ()
      (make-local-variable 'js-indent-level)
      (setq js-indent-level 2))))
-
-(defun cydonia/post-init-dart-mode()
-  (add-hook
-   'dart-mode-hook
-   (lambda ()
-     (add-hook 'after-save-hook 'auto-reload-flutter nil 'make-it-local))))
 
 (defun cydonia/post-init-rust-mode()
   (add-hook

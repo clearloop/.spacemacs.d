@@ -17,6 +17,13 @@
     go-use-golangci-lint t
     godoc-at-point-function 'godoc-gogetdoc)
 
+   (solidity :variables
+             solidity-flycheck-solc-checker-active t)
+
+   (dart
+    :variables
+    dart-server-format-on-save t)
+
    (json
     :variables
     json-fmt-tool 'prettier

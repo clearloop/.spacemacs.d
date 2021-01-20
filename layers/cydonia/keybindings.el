@@ -16,8 +16,9 @@
  ("M-e TAB" . spacemacs/alternate-window)
 
  ;; move
- ("C-a" . back-to-indentation)
- ("M-a" . move-to-left-margin)
+ ;; ("C-a" . back-to-indentation)
+ ;; ("M-a" . move-to-left-margin)
+ ("M-a" . back-to-indentation)
 
  ;; others
  ("C-c '" . neotree-toggle-x)
