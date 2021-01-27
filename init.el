@@ -6,7 +6,9 @@
   "Instantiate Spacemacs layers declarations and package configurations."
   (setq-default
    dotspacemacs-distribution 'spacemacs-base
-   dotspacemacs-configuration-layers '(cydonia)
+   dotspacemacs-configuration-layers '(react
+                                       sql
+                                       cydonia)
    dotspacemacs-additional-packages
    '(graphql-mode
      jest
@@ -49,6 +51,8 @@
 
 (defun dotspacemacs/user-config ()
   (require 'wat-mode)
+  (setq-default typescript-indent-level 2)
+  (setq create-lockfiles nil)
   "Configuration that cannot be delegated to layers.")
 
 ;; Do not write anything past this comment. This is where Emacs will

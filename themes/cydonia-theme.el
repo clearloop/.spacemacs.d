@@ -68,6 +68,9 @@
  ;; dap
  '(dap-result-overlay-face ((t (:background "brightblue" :box (:line-width -1 :color "yellow")))))
 
+ ;; neo
+ '(neo-file-link-face ((t (:foreground "white"))))
+
  ;; lsp
  '(lsp-ui-doc-background ((t (:background "color-18"))))
  )

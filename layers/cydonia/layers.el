@@ -41,5 +41,6 @@
 
    (typescript
     :variables
-    typescript-fmt-tool 'typescript-formatter
+    typescript-backend 'lsp
+    typescript-fmt-tool 'prettier
     typescript-fmt-on-save t)))
