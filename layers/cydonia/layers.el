@@ -10,7 +10,16 @@
    yaml markdown git shell cmake html vimscript emoji systemd
 
    ;; languages
-   javascript shell dart protobuf ruby nginx kotlin swift php
+   shell dart protobuf ruby nginx kotlin swift php
+   (javascript
+    :variables
+    js-indent-level 2
+    javascript-backend 'lsp
+    javascript-fmt-tool 'prettier
+    javascript-fmt-on-save t
+    js2-mode-show-strict-warnings nil
+    js2-mode-show-parse-errors nil)
+
    (go
     :variables
     go-format-before-save t
@@ -31,6 +40,8 @@
 
    (python
     :variables
+    python-backend 'lsp
+    python-lsp-server 'mypyls
     python-formatter 'yapf
     python-format-on-save t
     python-sort-imports-on-save t)
@@ -41,6 +52,7 @@
 
    (typescript
     :variables
+    typescript-indent-level 2
     typescript-backend 'lsp
     typescript-fmt-tool 'prettier
     typescript-fmt-on-save t)))

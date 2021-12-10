@@ -10,8 +10,7 @@
                                        sql
                                        cydonia)
    dotspacemacs-additional-packages
-   '(graphql-mode
-     jest
+   '(graphql-mode svelte-mode
      (wat-mode :location (recipe :fetcher github :repo devonsparks/wat-mode)))
    dotspacemacs-excluded-packages '(cydonia-theme)
    ))
@@ -43,6 +42,7 @@
 (defun dotspacemacs/user-init ()
   "Package independent settings to run before `dotspacemacs/user-config'."
   (add-to-list 'custom-theme-load-path "~/.spacemacs.d/themes")
+  (setq byte-compile-warnings '(cl-functions))
   (setq backup-directory-alist
         `((".*" . ,temporary-file-directory)))
   (setq auto-save-file-name-transforms
@@ -51,7 +51,6 @@
 
 (defun dotspacemacs/user-config ()
   (require 'wat-mode)
-  (setq-default typescript-indent-level 2)
   (setq create-lockfiles nil)
   "Configuration that cannot be delegated to layers.")
 
