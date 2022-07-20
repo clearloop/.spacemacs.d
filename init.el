@@ -6,7 +6,8 @@
   "Instantiate Spacemacs layers declarations and package configurations."
   (setq-default
    dotspacemacs-distribution 'spacemacs-base
-   dotspacemacs-configuration-layers '(react
+   dotspacemacs-configuration-layers '(elixir
+                                       react
                                        sql
                                        cydonia)
    dotspacemacs-additional-packages
@@ -31,11 +32,7 @@
    dotspacemacs-emacs-leader-key  "M-m"
    dotspacemacs-emacs-command-key "SPC"
    dotspacemacs-leader-key        "SPC"
-   )
-  (setq configuration-layer-elpa-archives
-        '(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-          ("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-          ("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/"))))
+   ))
 
 ;;; Spacemacs/user-*
 

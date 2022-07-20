@@ -3,11 +3,16 @@
  '(
    ;; core
    ivy syntax-checking auto-completion dap neotree
-   (lsp :variables lsp-rust-server 'rls)
    (docker :variables docker-dockerfile-backend 'lsp)
 
    ;; Mark ups
    yaml markdown git shell cmake html vimscript emoji systemd
+
+   ;; lsp
+   (lsp :variables
+        lsp-ui-doc-show-with-cursor t
+        lsp-ui-doc-include-signature t
+        lsp-rust-server 'rust-analyzer)
 
    ;; languages
    shell dart protobuf ruby nginx kotlin swift php
@@ -32,6 +37,10 @@
    (dart
     :variables
     dart-server-format-on-save t)
+
+   (elixir
+    :variables
+    elixir-backend 'lsp)
 
    (json
     :variables

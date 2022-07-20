@@ -1,5 +1,5 @@
 ;; variables
-(setq-default tab-width 4)
+(setq-default tab-width 2)
 (setq x-select-enable-clipboard t)
 
 ;; config
